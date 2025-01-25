@@ -86,6 +86,10 @@ const printData = () => {
         const modifyButton = document.getElementById("mod");
         modifyButton.addEventListener("click", () => {
             location.href = "Backoffice.html";
+
+            // quando il butt ti porta a backoffice deve riprendere tutti i dati del prodotto (serve ${product._id}) per
+            // poi far partire una funzione fetch(`${url}${product._id}`), che si collega al bottone modifica della pagina back, che
+            // fa modificare il prodotto
         });
     });
 };
