@@ -48,7 +48,7 @@ const printData = () => {
                     </div>
                 </div>
                 <div class="card-footer d-flex justify-content-around align-items-center bg-light rounded-bottom-4 py-3">
-                    <button class="btn btn-outline-dark btn-sm">
+                    <button class="btn btn-outline-dark btn-sm" id="mod">
                         Modifica
                     </button>
                     <button class="btn btn-outline-danger btn-sm" id="delt-${product._id}">
@@ -81,6 +81,11 @@ const printData = () => {
                 .catch((error) => {
                     console.error("Error during DELETE request:", error);
                 });
+        });
+
+        const modifyButton = document.getElementById("mod");
+        modifyButton.addEventListener("click", () => {
+            location.href = "Backoffice.html";
         });
     });
 };
