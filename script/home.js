@@ -33,15 +33,30 @@ const printData = () => {
     products.innerHTML = "";
     list.forEach((product) => {
         products.innerHTML += `
-        <div class="card" style="width: 18rem;">
-            <img src="${product.imageUrl}" class="card-img-top" alt="${product.description}">
-            <div class="card-body">
-                <h5 class="card-title">${product.name}</h5>
-                <p class= "card-text">${product.name}</p>
-                <p class="card-text">${product.price} </p>
-                <a href="./backoffice.html" class="btn btn-primary">Modifica</a>
-            </div>
+ <div class="card shadow-lg border-0 rounded-4" style="width: 18rem; overflow: hidden;">
+    <div class="position-relative">
+        <img src="${product.imageUrl}" class="card-img-top rounded-top-4" alt="${product.description}" style="height: 200px; object-fit: cover;">
+    </div>
+    <div class="card-body text-center">
+        <h5 class="card-title fw-bold text- mb-2">${product.name}</h5>
+        <p class="card-text text-muted mb-3">${product.description}</p>
+        <p class="card-text text-secondary mb-4">
+            <strong>Brand:</strong> ${product.brand}
+        </p>
+        <div class="text-center">
+            <span class="h5 text-success fw-bold">${product.price}€</span>
         </div>
+    </div>
+    <div class="card-footer d-flex justify-content-around align-items-center bg-light rounded-bottom-4 py-3">
+        <button class="btn btn-outline-dark btn-sm">
+         Modifica
+        </button>
+        <button class="btn btn-outline-danger btn-sm">
+        Elimina
+        </button>
+    </div>
+</div>
+
         `;
     });
 };

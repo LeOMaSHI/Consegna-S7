@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
             this.description = description;
             this.brand = brand;
             this.imageUrl = imageUrl;
-            this.price = parseFloat(price); //non me lo legge (??)
+            this.price = parseFloat(price);
         }
     }
 
@@ -60,7 +60,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 throw new Error("Errore nell'aggiunta del prodotto. " + (errorDetails.message || ""));
             } else {
                 alert("Prodotto inserito con successo!");
-                location.href = "home.html"; //perche ho messo index??????
+                location.href = "home.html";
                 clearInputs();
             }
         } catch (error) {
