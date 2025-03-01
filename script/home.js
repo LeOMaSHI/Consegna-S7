@@ -83,7 +83,9 @@ const printData = () => {
                 });
         });
 
+        const modifyProduct = product;
         const modifyButton = document.getElementById("mod");
+
         modifyButton.addEventListener("click", () => {
             location.href = "Backoffice.html";
 
